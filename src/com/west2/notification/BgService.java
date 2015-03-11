@@ -4,7 +4,9 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import com.west2.entity.Mes;
 import com.west2.service.DataService;
+import com.west2.service.NotificationService;
 
 import android.app.Service;
 import android.content.Intent;

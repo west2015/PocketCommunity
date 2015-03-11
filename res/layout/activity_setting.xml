@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.5"
-        android:background="@color/blue"
+        android:background="@color/blue_500"
         android:orientation="horizontal">
 	    <LinearLayout 
 	        android:layout_width="0dp"
@@ -39,13 +39,13 @@
 	    android:layout_width="match_parent"
 	    android:layout_height="0dp"
 	    android:layout_weight="15.5"
-	    android:background="@color/grey">
+	    android:background="@color/grey_500">
 	    <LinearLayout 
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:orientation="vertical"
 	        android:gravity="center_horizontal"
-	        android:background="@color/trans"
+	        android:background="@color/transparent"
 	        android:layout_marginTop="@dimen/setting_margin_top">
 	        <!-- Photo -->
 	        <ImageButton
@@ -54,12 +54,12 @@
 	            android:layout_height="@dimen/setting_photo_height"
 	            android:src="@drawable/photo"
 	            android:scaleType="fitXY"
-	            android:background="@color/trans"/>
+	            android:background="@color/transparent"/>
 	        <!-- Personal Information -->
 	        <LinearLayout 
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:background="@color/trans"
+		        android:background="@color/transparent"
 		        android:layout_marginTop="@dimen/setting_margin_top"
 		        android:orientation="vertical">
 		        <LinearLayout 
@@ -85,7 +85,7 @@
 					    android:text="Mcginn"
 					    android:textColor="@color/black"
 					    android:textSize="@dimen/setting_text_size"
-					    android:background="@color/trans"/>    
+					    android:background="@color/transparent"/>    
 		        </LinearLayout>
 		        <!-- Modify Password -->
 				<LinearLayout 
@@ -118,7 +118,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/trans"
+                                android:background="@color/transparent"
                                 android:scaleType="fitEnd"
                                 android:src="@drawable/detail_icon" />
 						</LinearLayout>
@@ -126,7 +126,7 @@
 						    android:id="@+id/setting_btn_modify"
 						    android:layout_width="match_parent"
 						    android:layout_height="match_parent"
-						    android:background="@color/trans"/>
+						    android:background="@color/transparent"/>
 					</FrameLayout>
 		        </LinearLayout>
 		        <LinearLayout 
@@ -164,7 +164,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/trans"
+                                android:background="@color/transparent"
                                 android:scaleType="fitEnd"
                                 android:src="@drawable/detail_icon" />
 						</LinearLayout>
@@ -172,7 +172,7 @@
 						    android:id="@+id/setting_btn_tel"
 						    android:layout_width="match_parent"
 						    android:layout_height="match_parent"
-						    android:background="@color/trans"/>
+						    android:background="@color/transparent"/>
 					</FrameLayout>
 		        </LinearLayout>
 		        <LinearLayout 
@@ -210,7 +210,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/trans"
+                                android:background="@color/transparent"
                                 android:scaleType="fitEnd"
                                 android:src="@drawable/detail_icon" />
 						</LinearLayout>
@@ -218,7 +218,7 @@
 						    android:id="@+id/setting_btn_address"
 						    android:layout_width="match_parent"
 						    android:layout_height="match_parent"
-						    android:background="@color/trans"/>
+						    android:background="@color/transparent"/>
 					</FrameLayout>
 		        </LinearLayout>
 		    </LinearLayout>
@@ -226,7 +226,7 @@
 	        <LinearLayout 
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:background="@color/trans"
+		        android:background="@color/transparent"
 		        android:layout_marginTop="@dimen/setting_margin_top"
 		        android:orientation="vertical">
 		        <LinearLayout 
@@ -259,7 +259,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/trans"
+                                android:background="@color/transparent"
                                 android:scaleType="fitEnd"
                                 android:src="@drawable/detail_icon" />
 						</LinearLayout>
@@ -267,7 +267,7 @@
 						    android:id="@+id/setting_btn_myexpense"
 						    android:layout_width="match_parent"
 						    android:layout_height="match_parent"
-						    android:background="@color/trans"/>
+						    android:background="@color/transparent"/>
 					</FrameLayout>
 		        </LinearLayout>
 		        <LinearLayout 
@@ -301,7 +301,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/trans"
+                                android:background="@color/transparent"
                                 android:scaleType="fitEnd"
                                 android:src="@drawable/detail_icon" />
 						</LinearLayout>
@@ -309,7 +309,7 @@
 						    android:id="@+id/setting_btn_myrepair"
 						    android:layout_width="match_parent"
 						    android:layout_height="match_parent"
-						    android:background="@color/trans"/>
+						    android:background="@color/transparent"/>
 					</FrameLayout>
 		        </LinearLayout>
 		        <LinearLayout 
@@ -342,7 +342,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/trans"
+                                android:background="@color/transparent"
                                 android:scaleType="fitEnd"
                                 android:src="@drawable/detail_icon" />
 						</LinearLayout>
@@ -350,7 +350,7 @@
 						    android:id="@+id/setting_btn_myadvice"
 						    android:layout_width="match_parent"
 						    android:layout_height="match_parent"
-						    android:background="@color/trans"/>
+						    android:background="@color/transparent"/>
 					</FrameLayout>
 		        </LinearLayout>
 		        <LinearLayout 
@@ -383,7 +383,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/trans"
+                                android:background="@color/transparent"
                                 android:scaleType="fitEnd"
                                 android:src="@drawable/detail_icon" />
 						</LinearLayout>
@@ -391,7 +391,7 @@
 						    android:id="@+id/setting_btn_myshoprecord"
 						    android:layout_width="match_parent"
 						    android:layout_height="match_parent"
-						    android:background="@color/trans"/>
+						    android:background="@color/transparent"/>
 					</FrameLayout>
 		        </LinearLayout>
 		    </LinearLayout>
@@ -399,7 +399,7 @@
 	        <LinearLayout 
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:background="@color/trans"
+		        android:background="@color/transparent"
 		        android:layout_marginTop="@dimen/setting_margin_top"
 		        android:orientation="vertical">
 		        <LinearLayout 
@@ -432,7 +432,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/trans"
+                                android:background="@color/transparent"
                                 android:scaleType="fitEnd"
                                 android:src="@drawable/detail_icon" />
 						</LinearLayout>
@@ -440,7 +440,7 @@
 						    android:id="@+id/setting_btn_help"
 						    android:layout_width="match_parent"
 						    android:layout_height="match_parent"
-						    android:background="@color/trans"/>
+						    android:background="@color/transparent"/>
 					</FrameLayout>
 		        </LinearLayout>
 		        <LinearLayout 
@@ -470,7 +470,7 @@
 						    android:id="@+id/setting_btn_update"
 						    android:layout_width="match_parent"
 						    android:layout_height="match_parent"
-						    android:background="@color/trans"/>
+						    android:background="@color/transparent"/>
 					</FrameLayout>
 		        </LinearLayout>
 		    </LinearLayout>
@@ -478,7 +478,7 @@
 	       <LinearLayout 
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:background="@color/trans"
+		        android:background="@color/transparent"
 		        android:layout_marginTop="@dimen/setting_margin_top"
 		        android:orientation="vertical">
 		        <LinearLayout 
@@ -493,7 +493,7 @@
 					    android:text="@string/setting_logoff"
 					    android:textColor="@color/white"
 					    android:textSize="@dimen/setting_text_size"
-					    android:background="@color/red"
+					    android:background="@color/red_500"
 					    android:padding="@dimen/setting_text_padding"/>
 		        </LinearLayout>
 		    </LinearLayout>	    

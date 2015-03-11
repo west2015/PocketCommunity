@@ -35,26 +35,26 @@
         
         
         <activity
-            android:name="com.west2.login.LoginActivity"
+            android:name="com.west2.activity.LoginActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.west2.main.MainActivity"></activity>
-		<activity android:name="com.west2.register.RegisterActivity"/>
-        <activity android:name="com.west2.notice.NoticeActivity"/>
-        <activity android:name="com.west2.property.PropertyActivity"/>
-        <activity android:name="com.west2.property.PropertyMsgActivity"/>
-        <activity android:name="com.west2.property.PropertyExpenseActivity"/>
-        <activity android:name="com.west2.property.PropertyRepairActivity"/>
-        <activity android:name="com.west2.property.PropertyAdviceActivity"/>
-        <activity android:name="com.west2.shop.ShopActivity"/>
-        <activity android:name="com.west2.shop.MyShopActivity"/>
-        <activity android:name="com.west2.activity.ActivityActivity"/>
-        <activity android:name="com.west2.activity.ActivityPostActivity"/>
-        <activity android:name="com.west2.activity.ActivityDetailActivity"/>
-        <activity android:name="com.west2.setting.SettingActivity"/>
+        <activity android:name="com.west2.activity.MainActivity"></activity>
+		<activity android:name="com.west2.activity.RegisterActivity"/>
+        <activity android:name="com.west2.subactivity.notice.NoticeActivity"/>
+        <activity android:name="com.west2.subactivity.property.PropertyActivity"/>
+        <activity android:name="com.west2.subactivity.property.PropertyMsgActivity"/>
+        <activity android:name="com.west2.subactivity.property.PropertyExpenseActivity"/>
+        <activity android:name="com.west2.subactivity.property.PropertyRepairActivity"/>
+        <activity android:name="com.west2.subactivity.property.PropertyAdviceActivity"/>
+        <activity android:name="com.west2.subactivity.shop.ShopActivity"/>
+        <activity android:name="com.west2.subactivity.shop.MyShopActivity"/>
+        <activity android:name="com.west2.subactivity.activity.ActivityActivity"/>
+        <activity android:name="com.west2.subactivity.activity.ActivityPostActivity"/>
+        <activity android:name="com.west2.subactivity.activity.ActivityDetailActivity"/>
+        <activity android:name="com.west2.subactivity.setting.SettingActivity"/>
     </application>
 </manifest>

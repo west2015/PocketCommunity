@@ -25,7 +25,7 @@
 	            android:layout_weight="1"
 	            android:padding="@dimen/activity_padding"
 	            android:text="@string/activity_top"
-	            android:textColor="@color/red"
+	            android:textColor="@color/red_500"
 				android:textSize="@dimen/activity_top_size"
 				android:background="@drawable/activity_title_bg"/>
 	        <TextView
@@ -46,7 +46,7 @@
 	        android:layout_height="wrap_content"
 	        android:padding="@dimen/activity_padding"
 	        android:text="@string/activity_test_content"
-	        android:textColor="@color/grey"
+	        android:textColor="@color/grey_500"
 	        android:textSize="@dimen/activity_content_text_size"
 	        android:ellipsize="end"/>
 	    <!-- Bottom -->
@@ -63,7 +63,7 @@
 	            android:layout_weight="5"
 	            android:gravity="center_vertical"
 	            android:text="@string/activity_test_the_person"
-	            android:textColor="@color/black_grey"
+	            android:textColor="@color/grey_700"
 	            android:textSize="@dimen/activity_the_person_size"/>
 	        <TextView
 	            android:id="@+id/activity_review"
@@ -72,7 +72,7 @@
 	            android:layout_weight="4"
 	            android:gravity="right"
 	            android:text="@string/activity_test_review"
-	            android:textColor="@color/blue"
+	            android:textColor="@color/blue_500"
 	            android:textSize="@dimen/activity_review_size"/>
 	    </LinearLayout>
 	</LinearLayout>

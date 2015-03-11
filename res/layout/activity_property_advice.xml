@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.5"
-        android:background="@color/blue"
+        android:background="@color/blue_500"
         android:orientation="horizontal">
 	    <LinearLayout 
 	        android:layout_width="0dp"
@@ -20,7 +20,7 @@
 			    android:layout_height="match_parent"
 			    android:src="@drawable/back_icon"
 			    android:scaleType="fitCenter"
-			    android:background="@color/trans"/>	        
+			    android:background="@color/transparent"/>	        
 	    </LinearLayout>
 	    <LinearLayout 
 	        android:layout_width="0dp"
@@ -46,7 +46,7 @@
 	    android:layout_width="match_parent"
 	    android:layout_height="0dp"
 	    android:layout_weight="15.5"
-	    android:background="@color/grey">
+	    android:background="@color/grey_500">
 	    <LinearLayout 
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
 			    android:textColor="@color/black"
 			    android:textSize="@dimen/property_repair_text_size"
 			    android:hint="@string/property_advice_hint"
-			    android:textColorHint="@color/dark_grey"
+			    android:textColorHint="@color/grey_500"
 			    android:padding="@dimen/property_repair_padding"/>
 			<LinearLayout 
 			    android:layout_width="match_parent"

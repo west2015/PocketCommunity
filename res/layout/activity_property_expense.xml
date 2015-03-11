@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.5"
-        android:background="@color/blue"
+        android:background="@color/blue_500"
         android:orientation="horizontal">
 	    <LinearLayout 
 	        android:layout_width="0dp"
@@ -20,7 +20,7 @@
 			    android:layout_height="match_parent"
 			    android:src="@drawable/back_icon"
 			    android:scaleType="fitCenter"
-			    android:background="@color/trans"/>	        
+			    android:background="@color/transparent"/>	        
 	    </LinearLayout>
 	    <LinearLayout 
 	        android:layout_width="0dp"
@@ -46,17 +46,17 @@
 	    android:layout_width="match_parent"
 	    android:layout_height="0dp"
 	    android:layout_weight="15.5"
-	    android:background="@color/grey">
+	    android:background="@color/grey_500">
 	    <LinearLayout 
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:orientation="vertical"
 	        android:gravity="center_horizontal"
-	        android:background="@color/trans">	        
+	        android:background="@color/transparent">	        
 	        <LinearLayout 
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:background="@color/trans"
+		        android:background="@color/transparent"
 		        android:layout_marginTop="@dimen/setting_margin_top"
 		        android:orientation="vertical">
 				<LinearLayout 
@@ -94,7 +94,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/trans"
+                                android:background="@color/transparent"
                                 android:scaleType="fitEnd"/>
 						</LinearLayout>
 					</FrameLayout>
@@ -134,7 +134,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/trans"
+                                android:background="@color/transparent"
                                 android:scaleType="fitEnd"
                                 android:src="@drawable/detail_icon" />
 						</LinearLayout>
@@ -142,14 +142,14 @@
 						    android:id="@+id/property_expense_btn_address"
 						    android:layout_width="match_parent"
 						    android:layout_height="match_parent"
-						    android:background="@color/trans"/>
+						    android:background="@color/transparent"/>
 					</FrameLayout>
 		        </LinearLayout>       
 		    </LinearLayout>
 	        <LinearLayout 
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:background="@color/trans"
+		        android:background="@color/transparent"
 		        android:layout_marginTop="@dimen/setting_margin_top"
 		        android:orientation="vertical">
 		        <LinearLayout 
@@ -181,13 +181,13 @@
 						        android:layout_weight="7"
 						        android:gravity="center_vertical"
 						        android:text="29.5"
-						        android:textColor="@color/red"
+						        android:textColor="@color/red_500"
 						        android:textSize="@dimen/setting_text_size"/>
 						    <ImageButton
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/trans"
+                                android:background="@color/transparent"
                                 android:scaleType="fitEnd"
                                 android:src="@drawable/detail_icon" />
 						</LinearLayout>
@@ -195,7 +195,7 @@
 						    android:id="@+id/property_expense_btn_balance"
 						    android:layout_width="match_parent"
 						    android:layout_height="match_parent"
-						    android:background="@color/trans"/>
+						    android:background="@color/transparent"/>
 					</FrameLayout>
 		        </LinearLayout>
 		        <LinearLayout 
@@ -227,13 +227,13 @@
 						        android:layout_weight="7"
 						        android:gravity="center_vertical"
 						        android:text="81.3"
-						        android:textColor="@color/red"
+						        android:textColor="@color/red_500"
 						        android:textSize="@dimen/setting_text_size"/>
 						    <ImageButton
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/trans"
+                                android:background="@color/transparent"
                                 android:scaleType="fitEnd"
                                 android:src="@drawable/detail_icon" />
 						</LinearLayout>
@@ -241,7 +241,7 @@
 						    android:id="@+id/property_expense_btn_unpaid"
 						    android:layout_width="match_parent"
 						    android:layout_height="match_parent"
-						    android:background="@color/trans"/>
+						    android:background="@color/transparent"/>
 					</FrameLayout>
 		        </LinearLayout>	
 		        <LinearLayout 
@@ -273,13 +273,13 @@
 						        android:layout_weight="7"
 						        android:gravity="center_vertical"
 						        android:text="0.0"
-						        android:textColor="@color/red"
+						        android:textColor="@color/red_500"
 						        android:textSize="@dimen/setting_text_size"/>
 						    <ImageButton
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/trans"
+                                android:background="@color/transparent"
                                 android:scaleType="fitEnd"
                                 android:src="@drawable/detail_icon" />
 						</LinearLayout>
@@ -287,14 +287,14 @@
 						    android:id="@+id/property_expense_btn_deposit"
 						    android:layout_width="match_parent"
 						    android:layout_height="match_parent"
-						    android:background="@color/trans"/>
+						    android:background="@color/transparent"/>
 					</FrameLayout>
 		        </LinearLayout>   		        	        
 		    </LinearLayout>
 	        <LinearLayout 
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:background="@color/trans"
+		        android:background="@color/transparent"
 		        android:layout_marginTop="@dimen/setting_margin_top"
 		        android:orientation="vertical">
 				<LinearLayout 
@@ -324,13 +324,13 @@
 						        android:layout_height="match_parent"
 						        android:layout_weight="7"
 						        android:gravity="center_vertical"
-						        android:textColor="@color/red"
+						        android:textColor="@color/red_500"
 						        android:textSize="@dimen/setting_text_size"/>
 						    <ImageButton
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@color/trans"
+                                android:background="@color/transparent"
                                 android:scaleType="fitEnd"
                                 android:src="@drawable/detail_icon" />
 						</LinearLayout>
@@ -338,7 +338,7 @@
 						    android:id="@+id/property_expense_btn_history"
 						    android:layout_width="match_parent"
 						    android:layout_height="match_parent"
-						    android:background="@color/trans"/>
+						    android:background="@color/transparent"/>
 					</FrameLayout>
 		        </LinearLayout>		        
 		    </LinearLayout>

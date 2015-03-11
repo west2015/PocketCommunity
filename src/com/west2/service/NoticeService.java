@@ -11,8 +11,8 @@ import android.content.Context;
 import android.util.Log;
 
 import com.example.pocketcommunity.R;
-import com.west2.notice.Notice;
-import com.west2.tool.HttpUtils;
+import com.west2.entity.Notice;
+import com.west2.utils.HttpUtils;
 
 public class NoticeService {
 	public static List<Notice> getNotices(Context context){

@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/grey">
+    android:background="@color/grey_200">
     <!-- HEAD -->
 	<LinearLayout
 	    android:layout_width="match_parent"
 	    android:layout_height="0dp"
 	    android:layout_weight="2"
-	    android:background="@color/blue"
+	    android:background="@color/blue_500"
 	    android:orientation="horizontal">
 	    <LinearLayout 
 	        android:layout_width="0dp"
@@ -22,13 +22,13 @@
 	            android:src="@drawable/back_icon"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:background="@color/trans"
+	            android:background="@color/transparent"
 	            android:scaleType="fitCenter"/>
 	    </LinearLayout>
 	    <LinearLayout 
 	        android:layout_width="0dp"
 	        android:layout_height="match_parent"
-	        android:layout_weight="4"
+	        android:layout_weight="3"
 	        android:gravity="center">
 			<TextView 
 			    android:layout_width="wrap_content"
@@ -47,7 +47,8 @@
 	<ScrollView
 	    android:layout_width="match_parent"
 	    android:layout_height="0dp"
-	    android:layout_weight="16">
+	    android:layout_weight="16"
+	    android:scrollbars="none">
 		<FrameLayout 
 		    android:layout_width="match_parent"
 		    android:layout_height="match_parent">
@@ -65,8 +66,8 @@
 				    android:layout_marginTop="@dimen/register_layout_margin">
 				    <LinearLayout 
 				        android:layout_width="0dp"
-				        android:layout_height="wrap_content"
-				        android:layout_weight="4"
+				        android:layout_height="48dp"
+				        android:layout_weight="3"
 				        android:gravity="center"
 				        android:background="@drawable/register_row_bg"
 				        android:paddingTop="@dimen/register_padding"
@@ -74,9 +75,9 @@
 				        <TextView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:text="@string/register_username"
-				            android:textSize="@dimen/register_common_text"
-				            android:textColor="@color/blue"/>
+				            android:text="用户名"
+				            android:textSize="18sp"
+				            android:textColor="@color/blue_500"/>
 				    </LinearLayout>
 				    <LinearLayout 
 				        android:layout_width="0dp"
@@ -91,10 +92,11 @@
 				        <EditText
 				            android:id="@+id/register_username"
 				            android:layout_width="match_parent"
-				            android:layout_height="match_parent"
+				            android:layout_height="48dp"
 				            android:gravity="center"
-				            android:textColor="@color/black"
-				            android:background="@color/trans"/>
+				            android:textSize="18sp"
+				            android:textColor="@color/black_text"
+				            android:background="@color/transparent"/>
 				    </LinearLayout>
 				</LinearLayout>
 				<LinearLayout
@@ -105,8 +107,8 @@
 				    android:layout_marginTop="@dimen/register_layout_margin">
 				    <LinearLayout 
 				        android:layout_width="0dp"
-				        android:layout_height="wrap_content"
-				        android:layout_weight="4"
+				        android:layout_height="48dp"
+				        android:layout_weight="3"
 				        android:gravity="center"
 				        android:background="@drawable/register_row_bg"
 				        android:paddingTop="@dimen/register_padding"
@@ -114,9 +116,9 @@
 				        <TextView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:text="@string/register_password"
-				            android:textSize="@dimen/register_common_text"
-				            android:textColor="@color/blue"/>
+				            android:text="密码"
+				            android:textSize="16sp"
+				            android:textColor="@color/blue_500"/>
 				    </LinearLayout>
 				    <LinearLayout 
 				        android:layout_width="0dp"
@@ -125,10 +127,11 @@
 				        <EditText
 				            android:id="@+id/register_password_1"
 				            android:layout_width="match_parent"
-				            android:layout_height="match_parent"
+				            android:layout_height="48dp"
 				            android:gravity="center"
-				            android:textColor="@color/black"
-				            android:background="@color/trans"
+				            android:textSize="18sp"
+				            android:textColor="@color/black_text"
+				            android:background="@color/transparent"
 				            android:inputType="textPassword"/>
 				    </LinearLayout>
 				</LinearLayout>
@@ -140,8 +143,8 @@
 				    android:layout_marginTop="@dimen/register_layout_margin">
 				    <LinearLayout 
 				        android:layout_width="0dp"
-				        android:layout_height="wrap_content"
-				        android:layout_weight="4"
+				        android:layout_height="48dp"
+				        android:layout_weight="3"
 				        android:gravity="center"
 				        android:background="@drawable/register_row_bg"
 				        android:paddingTop="@dimen/register_padding"
@@ -149,9 +152,9 @@
 				        <TextView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:text="@string/register_confirm_password"
-				            android:textSize="@dimen/register_common_text"
-				            android:textColor="@color/blue"/>
+				            android:text="确认密码"
+				            android:textSize="18sp"
+				            android:textColor="@color/blue_500"/>
 				    </LinearLayout>
 				    <LinearLayout 
 				        android:layout_width="0dp"
@@ -160,10 +163,11 @@
 				        <EditText
 				            android:id="@+id/register_password_2"
 				            android:layout_width="match_parent"
-				            android:layout_height="match_parent"
+				            android:layout_height="48dp"
 				            android:gravity="center"
-				            android:textColor="@color/black"
-				            android:background="@color/trans"
+				            android:textSize="18sp"
+				            android:textColor="@color/black_text"
+				            android:background="@color/transparent"
 				            android:inputType="textPassword"/>
 				    </LinearLayout>
 				</LinearLayout>
@@ -186,9 +190,9 @@
 				            android:layout_width="match_parent"
 				            android:layout_height="match_parent"
 				            android:background="@drawable/register_button_bg"
-				            android:text="@string/register_next_step"
-				            android:textColor="@color/white"
-				            android:textSize="@dimen/register_common_text"/>
+				            android:text="下一步"
+				            android:textSize="18sp"
+				            android:textColor="@color/white_text"/>
 				    </LinearLayout>
 				    <LinearLayout 
 				        android:layout_width="0dp"
@@ -212,8 +216,8 @@
 				    android:layout_marginTop="@dimen/register_layout_margin">
 				    <LinearLayout 
 				        android:layout_width="0dp"
-				        android:layout_height="wrap_content"
-				        android:layout_weight="4"
+				        android:layout_height="48dp"
+				        android:layout_weight="3"
 				        android:gravity="center"
 				        android:background="@drawable/register_row_bg"
 				        android:paddingTop="@dimen/register_padding"
@@ -221,9 +225,9 @@
 				        <TextView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:text="@string/register_name"
-				            android:textSize="@dimen/register_common_text"
-				            android:textColor="@color/blue"/>
+				            android:text="姓名"
+				            android:textSize="18sp"
+				            android:textColor="@color/blue_500"/>
 				    </LinearLayout>
 				    <LinearLayout 
 				        android:layout_width="0dp"
@@ -232,10 +236,11 @@
 				        <EditText
 				            android:id="@+id/register_name"
 				            android:layout_width="match_parent"
-				            android:layout_height="match_parent"
+				            android:layout_height="48dp"
 				            android:gravity="center"
-				            android:textColor="@color/black"
-				            android:background="@color/trans"/>
+				            android:textSize="18sp"
+				            android:textColor="@color/black_text"
+				            android:background="@color/transparent"/>
 				    </LinearLayout>
 				</LinearLayout>
 				<LinearLayout
@@ -246,8 +251,8 @@
 				    android:layout_marginTop="@dimen/register_layout_margin">
 				    <LinearLayout 
 				        android:layout_width="0dp"
-				        android:layout_height="wrap_content"
-				        android:layout_weight="4"
+				        android:layout_height="48dp"
+				        android:layout_weight="3"
 				        android:gravity="center"
 				        android:background="@drawable/register_row_bg"
 				        android:paddingTop="@dimen/register_padding"
@@ -255,9 +260,9 @@
 				        <TextView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:text="@string/register_tel"
-				            android:textSize="@dimen/register_common_text"
-				            android:textColor="@color/blue"/>
+				            android:text="电话"
+				            android:textSize="18sp"
+				            android:textColor="@color/blue_500"/>
 				    </LinearLayout>
 				    <LinearLayout 
 				        android:layout_width="0dp"
@@ -266,10 +271,11 @@
 				        <EditText
 				            android:id="@+id/register_tel"
 				            android:layout_width="match_parent"
-				            android:layout_height="match_parent"
+				            android:layout_height="48dp"
 				            android:gravity="center"
-				            android:textColor="@color/black"
-				            android:background="@color/trans"/>
+				            android:textSize="18sp"
+				            android:textColor="@color/black_text"
+				            android:background="@color/transparent"/>
 				    </LinearLayout>
 				</LinearLayout>
 				<LinearLayout
@@ -280,8 +286,8 @@
 				    android:layout_marginTop="@dimen/register_layout_margin">
 				    <LinearLayout 
 				        android:layout_width="0dp"
-				        android:layout_height="wrap_content"
-				        android:layout_weight="4"
+				        android:layout_height="48dp"
+				        android:layout_weight="3"
 				        android:gravity="center"
 				        android:background="@drawable/register_row_bg"
 				        android:paddingTop="@dimen/register_padding"
@@ -289,9 +295,9 @@
 				        <TextView
 				            android:layout_width="wrap_content"
 				            android:layout_height="wrap_content"
-				            android:text="@string/register_address"
-				            android:textSize="@dimen/register_common_text"
-				            android:textColor="@color/blue"/>
+				            android:text="地址"
+				            android:textSize="18sp"
+				            android:textColor="@color/blue_500"/>
 				    </LinearLayout>
 				    <LinearLayout 
 				        android:layout_width="0dp"
@@ -300,10 +306,11 @@
 						<EditText
 				            android:id="@+id/register_address"
 				            android:layout_width="match_parent"
-				            android:layout_height="match_parent"
+				            android:layout_height="48dp"
 				            android:gravity="center"
-				            android:textColor="@color/black"
-				            android:background="@color/trans"/>				        
+				            android:textSize="18sp"
+				            android:textColor="@color/black_text"
+				            android:background="@color/transparent"/>				        
 				    </LinearLayout>
 				</LinearLayout>
 				<LinearLayout
@@ -325,9 +332,9 @@
 				            android:layout_width="match_parent"
 				            android:layout_height="match_parent"
 				            android:background="@drawable/register_button_bg"
-				            android:text="@string/register_finish"
-				            android:textColor="@color/white"
-				            android:textSize="@dimen/register_common_text"/>
+				            android:text="注册"
+				            android:textColor="@color/white_text"
+				            android:textSize="18sp"/>
 				    </LinearLayout>
 				    <LinearLayout 
 				        android:layout_width="0dp"
@@ -345,7 +352,7 @@
 					    android:layout_width="match_parent"
 					    android:layout_height="wrap_content"
 					    android:text="@string/register_warn"
-					    android:textColor="@color/light_black"
+					    android:textColor="@color/grey_200"
 					    android:textSize="@dimen/register_small_text"/>
 				</LinearLayout>
 		    </LinearLayout>

@@ -11,9 +11,9 @@ import android.content.Context;
 import android.util.Log;
 
 import com.example.pocketcommunity.R;
-import com.west2.shop.Item;
-import com.west2.shop.Shop;
-import com.west2.tool.HttpUtils;
+import com.west2.subactivity.shop.Item;
+import com.west2.subactivity.shop.Shop;
+import com.west2.utils.HttpUtils;
 
 public class ShopService {
 	

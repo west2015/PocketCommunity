@@ -40,7 +40,7 @@
 				    android:layout_height="0dp"
 				    android:layout_weight="2"
 				    android:text="@string/main_notice_title"
-				    android:textColor="@color/black_grey"
+				    android:textColor="@color/grey_700"
 				    android:gravity="center_horizontal|top"
 				    android:textSize="@dimen/main_title_text"/>				
 		    </LinearLayout>
@@ -48,7 +48,7 @@
 		        android:id="@+id/main_btn_notice"
 		        android:layout_width="match_parent"
 		       	android:layout_height="match_parent"
-		       	android:background="@color/trans"/>
+		       	android:background="@color/transparent"/>
 		</FrameLayout>
 		<FrameLayout 
 		    android:layout_width="0dp"
@@ -71,7 +71,7 @@
 				    android:layout_height="0dp"
 				    android:layout_weight="2"
 				    android:text="@string/main_property_title"
-				    android:textColor="@color/black_grey"
+				    android:textColor="@color/grey_700"
 				    android:gravity="center_horizontal|top"
 				    android:textSize="@dimen/main_title_text"/>				
 		    </LinearLayout>
@@ -79,7 +79,7 @@
 		        android:id="@+id/main_btn_property"
 		        android:layout_width="match_parent"
 		       	android:layout_height="match_parent"
-		       	android:background="@color/trans"/>
+		       	android:background="@color/transparent"/>
 		</FrameLayout>
 		<FrameLayout 
 		    android:layout_width="0dp"
@@ -102,7 +102,7 @@
 				    android:layout_height="0dp"
 				    android:layout_weight="2"
 				    android:text="@string/main_shop_title"
-				    android:textColor="@color/black_grey"
+				    android:textColor="@color/grey_700"
 				    android:gravity="center_horizontal|top"
 				    android:textSize="@dimen/main_title_text"/>				
 		    </LinearLayout>
@@ -110,7 +110,7 @@
 		        android:id="@+id/main_btn_shop"
 		        android:layout_width="match_parent"
 		       	android:layout_height="match_parent"
-		       	android:background="@color/trans"/>
+		       	android:background="@color/transparent"/>
 		</FrameLayout>
 		<FrameLayout 
 		    android:layout_width="0dp"
@@ -133,7 +133,7 @@
 				    android:layout_height="0dp"
 				    android:layout_weight="2"
 				    android:text="@string/main_activity_title"
-				    android:textColor="@color/black_grey"
+				    android:textColor="@color/grey_700"
 				    android:gravity="center_horizontal|top"
 				    android:textSize="@dimen/main_title_text"/>				
 		    </LinearLayout>
@@ -141,7 +141,7 @@
 		        android:id="@+id/main_btn_activity"
 		        android:layout_width="match_parent"
 		       	android:layout_height="match_parent"
-		       	android:background="@color/trans"/>
+		       	android:background="@color/transparent"/>
 		</FrameLayout>						
 		<FrameLayout 
 		    android:layout_width="0dp"
@@ -164,7 +164,7 @@
 				    android:layout_height="0dp"
 				    android:layout_weight="2"
 				    android:text="@string/main_setting_title"
-				    android:textColor="@color/black_grey"
+				    android:textColor="@color/grey_700"
 				    android:gravity="center_horizontal|top"
 				    android:textSize="@dimen/main_title_text"/>				
 		    </LinearLayout>
@@ -172,7 +172,7 @@
 		        android:id="@+id/main_btn_setting"
 		        android:layout_width="match_parent"
 		       	android:layout_height="match_parent"
-		       	android:background="@color/trans"/>
+		       	android:background="@color/transparent"/>
 		</FrameLayout>
 	</LinearLayout>
 </LinearLayout>

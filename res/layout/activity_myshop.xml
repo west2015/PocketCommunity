@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.5"
-        android:background="@color/blue"
+        android:background="@color/blue_500"
         android:orientation="horizontal">
 	    <LinearLayout 
 	        android:layout_width="0dp"
@@ -20,7 +20,7 @@
 			    android:layout_height="match_parent"
 			    android:src="@drawable/back_icon"
 			    android:scaleType="fitCenter"
-			    android:background="@color/trans"/>	        
+			    android:background="@color/transparent"/>	        
 	    </LinearLayout>
 	    <LinearLayout 
 	        android:layout_width="0dp"
@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.5"
-        android:background="@color/dark_grey"/>
+        android:background="@color/grey_700"/>
 	<LinearLayout 
 	    android:layout_width="match_parent"
 	    android:layout_height="0dp"
@@ -75,14 +75,14 @@
 			        android:layout_weight="2"
 			        android:gravity="center"
 			        android:text="@string/myshop_order"
-			        android:textColor="@color/dark_grey"
+			        android:textColor="@color/grey_700"
 			        android:textSize="@dimen/myshop_btn_textsize"/>
 			</LinearLayout>
 			<Button
 			    android:id="@+id/myshop_btn_order"
 			    android:layout_width="match_parent"
 			    android:layout_height="match_parent"
-			    android:background="@color/trans"/>
+			    android:background="@color/transparent"/>
 		</FrameLayout>
 		<FrameLayout 
 		    android:layout_width="0dp"
@@ -106,14 +106,14 @@
 			        android:layout_weight="2"
 			        android:gravity="center"
 			        android:text="@string/myshop_good"
-			        android:textColor="@color/dark_grey"
+			        android:textColor="@color/grey_700"
 			        android:textSize="@dimen/myshop_btn_textsize"/>
 			</LinearLayout>
 			<Button 
 			    android:id="@+id/myshop_btn_good"			    
 			    android:layout_width="match_parent"
 			    android:layout_height="match_parent"
-			    android:background="@color/trans"/>
+			    android:background="@color/transparent"/>
 		</FrameLayout>
 		<FrameLayout 
 		    android:layout_width="0dp"
@@ -137,26 +137,26 @@
 			        android:layout_weight="2"
 			        android:gravity="center"
 			        android:text="@string/myshop_add"
-			        android:textColor="@color/dark_grey"
+			        android:textColor="@color/grey_700"
 			        android:textSize="@dimen/myshop_btn_textsize"/>
 			</LinearLayout>
 			<Button
 			    android:id="@+id/myshop_btn_add"			    
 			    android:layout_width="match_parent"
 			    android:layout_height="match_parent"
-			    android:background="@color/trans"/>
+			    android:background="@color/transparent"/>
 		</FrameLayout>
 	</LinearLayout>
 	<LinearLayout 
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.5"
-        android:background="@color/dark_grey"/>
+        android:background="@color/grey_700"/>
 	<FrameLayout 
 	    android:layout_width="match_parent"
 	    android:layout_height="0dp"
 	    android:layout_weight="11.5"
-	    android:background="@color/trans">
+	    android:background="@color/transparent">
 		<com.handmark.pulltorefresh.library.PullToRefreshListView
 		    android:id="@+id/myshop_list_order"
 		    android:layout_width="match_parent"
@@ -171,7 +171,7 @@
 		    android:visibility="gone"
 		    android:layout_width="match_parent"
 		    android:layout_height="match_parent"
-		    android:background="@color/dark_grey">
+		    android:background="@color/grey_700">
 		    <LinearLayout 
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
@@ -188,7 +188,7 @@
 					    android:layout_weight="5"
 					    android:src="@drawable/add_image_icon"
 					    android:scaleType="fitCenter"
-					    android:background="@color/trans"/>
+					    android:background="@color/transparent"/>
 					<!-- Right -->
 					<LinearLayout 
 					    android:layout_width="0dp"
@@ -201,7 +201,7 @@
 					        android:layout_height="wrap_content"
 					        android:hint="@string/myshop_good_name"
 					        android:textColor="@color/black"
-					        android:textColorHint="@color/dark_grey"
+					        android:textColorHint="@color/grey_700"
 					        android:textSize="@dimen/myshop_btn_textsize"
 					        android:gravity="center"
 					        android:layout_marginTop="@dimen/shop_margin_top"/>
@@ -210,7 +210,7 @@
 					        android:layout_height="wrap_content"
 					        android:hint="@string/myshop_price"
 					        android:textColor="@color/black"
-					        android:textColorHint="@color/dark_grey"
+					        android:textColorHint="@color/grey_700"
 					        android:textSize="@dimen/myshop_btn_textsize"
 					        android:gravity="center"
 					        android:layout_marginTop="@dimen/shop_margin_top"

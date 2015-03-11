@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.util.Log;
 
-import com.west2.domain.User;
+import com.west2.entity.User;
 
 public class DataService {
 	

@@ -11,9 +11,9 @@ import android.content.Context;
 import android.util.Log;
 
 import com.example.pocketcommunity.R;
-import com.west2.activity.Activities;
-import com.west2.activity.Review;
-import com.west2.tool.HttpUtils;
+import com.west2.subactivity.activity.Activities;
+import com.west2.subactivity.activity.Review;
+import com.west2.utils.HttpUtils;
 
 public class ActivityService {
 	
