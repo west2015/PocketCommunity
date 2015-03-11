@@ -2,26 +2,32 @@ package com.west2.main;
 
 import java.util.ArrayList;
 
-import android.app.Activity;
-import android.app.LocalActivityManager;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import com.example.pocketcommunity.R;
 import com.west2.activity.ActivityActivity;
 import com.west2.adapter.ViewPagerAdapter;
 import com.west2.notice.NoticeActivity;
+import com.west2.notification.BgService;
+import com.west2.notification.MyBroadcastReceiver;
 import com.west2.property.PropertyActivity;
 import com.west2.setting.SettingActivity;
 import com.west2.shop.ShopActivity;
+
+import android.app.Activity;
+import android.app.LocalActivityManager;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity{
 	final private int[] titleId = {R.string.main_notice_title,R.string.main_property_title,R.string.main_shop_title,R.string.main_activity_title,R.string.main_setting_title};
@@ -44,6 +50,7 @@ public class MainActivity extends Activity{
 		
 		FindView();
 		InitValue();
+		InitService();
 		SetListener();
 	}
 	private void FindView(){
@@ -63,6 +70,14 @@ public class MainActivity extends Activity{
 		txtShop = (TextView)findViewById(R.id.main_txt_shop);
 		txtActivity = (TextView)findViewById(R.id.main_txt_activity);
 		txtSetting = (TextView)findViewById(R.id.main_txt_setting);
+	}
+	
+	private void InitService(){
+		IntentFilter filter = new IntentFilter(Intent.ACTION_TIME_TICK);
+		MyBroadcastReceiver receiver = new MyBroadcastReceiver();
+		registerReceiver(receiver, filter);
+		Intent i = new Intent(this, BgService.class);
+		startService(i);
 	}
 	private void InitValue(){
 		mContext = MainActivity.this;
@@ -187,4 +202,17 @@ public class MainActivity extends Activity{
 			break;
 		}
 	}
+	
+	@Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        String result = data.getExtras().getString("result");//得到新Activity 关闭后返回的数据
+//        Toast.makeText(this, "!!!!!", Toast.LENGTH_SHORT).show();
+        
+        SettingActivity activity = (SettingActivity)mManager
+        		         .getCurrentActivity();  
+        activity.changeImage(requestCode, resultCode, data);
+    }
+	
+	
+	
 }

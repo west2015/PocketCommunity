@@ -2,6 +2,7 @@ package com.west2.activity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.pocketcommunity.R;
+import com.west2.service.ActivityService;
 
 public class ActivityPostActivity extends Activity{
 	private Context mContext;
@@ -55,7 +57,41 @@ public class ActivityPostActivity extends Activity{
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				Toast.makeText(mContext, "Submit", Toast.LENGTH_SHORT).show();
+				
+				new AddActivityTask().execute();
+				
 			}
 		});
 	}
+	class AddActivityTask extends AsyncTask<Void, Void, Boolean>{
+
+		@Override
+		protected Boolean doInBackground(Void... params) {
+			// TODO Auto-generated method stub
+			
+			String title =etTitle.getText().toString().trim();
+			String content = etContent.getText().toString().trim();
+			String person = "ss";
+			Activities act = new Activities();
+			act.setThePerson(person);
+			act.setContent(content);
+			act.setTitle(title);
+			return ActivityService.addActivity(mContext, act);
+		}
+		
+		protected void onPostExecute(Boolean result) {
+			
+			
+			if(result){
+				Toast.makeText(mContext, "发表成功", Toast.LENGTH_SHORT).show();
+				ActivityPostActivity.this.finish();
+			}else{
+				Toast.makeText(mContext, "发表失败，请重试", Toast.LENGTH_SHORT).show();
+			}
+			
+			super.onPostExecute(result);
+		}
+	}
+	
+	
 }

@@ -3,6 +3,13 @@ package com.west2.shop;
 public class Item {
 	private String name;
 	private double price;
+	private String id;
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public Item(){
 		name = "";
 		price = 0.0;

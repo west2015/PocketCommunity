@@ -5,6 +5,16 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <!-- URL -->
+    <string name="url_login">http://192.168.191.1:8080/Property/servlet/login</string>
+    <string name="url_signup">http://192.168.191.1:8080/Property/servlet/signup</string>
+    <string name="url_notice">http://192.168.191.1:8080/Property/servlet/notice</string>
+    <string name="url_activity">http://192.168.191.1:8080/Property/servlet/activity</string>
+    <string name="url_addactivity">http://192.168.191.1:8080/Property/servlet/addactivity</string>
+    
+    <string name="url_marketlist">http://192.168.191.1:8080/Property/servlet/marketlist</string>
+    <string name="url_push">http://192.168.191.1:8080/Property/servlet/push</string>
+    
     <!-- Login -->
     <string name="login_btnlogin">登 录</string>
     <string name="login_hint_username">用户名</string>
@@ -52,6 +62,13 @@
 	<string name="shop_test_supermarket">万嘉超市</string>
 	<string name="shop_record">购买记录</string>
 	<string name="shop_myshop">我的店铺</string>
+	<string name="myshop_order">订单</string>
+	<string name="myshop_good">商品</string>
+	<string name="myshop_add">添加</string>
+	<string name="myshop_reset">重置</string>
+	<string name="myshop_finish">完成</string>
+	<string name="myshop_good_name">名称</string>
+	<string name="myshop_price">单价</string>
 	<!-- Activity -->
 	<string name="activity_top">置顶</string>
 	<string name="activity_test_title">【注意】活动版块需知</string>
@@ -63,6 +80,7 @@
 	<string name="activity_post_content">写些东西吧..</string>
 	<string name="activity_post_cancel">取消</string>
 	<string name="activity_post_submit">发表</string>
+	<string name="activity_detail_host">楼主</string>
 	<!-- Setting -->
 	<string name="setting_username">用户名</string>
 	<string name="setting_modifypassword">修改密码</string>

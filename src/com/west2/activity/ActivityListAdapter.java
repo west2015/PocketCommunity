@@ -61,7 +61,7 @@ public class ActivityListAdapter extends BaseAdapter{
 		holder.textTitle.setText(activity.getTitle());
 		holder.textContent.setText(activity.getContent());
 		holder.textThePerson.setText(activity.getThePerson());
-		holder.textReview.setText(activity.getReview());
+		holder.textReview.setText("»Ø¸´"+activity.getReviews().size());
 		return view;
 	}
 	

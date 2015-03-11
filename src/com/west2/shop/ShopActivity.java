@@ -6,10 +6,13 @@ import java.util.List;
 import com.example.pocketcommunity.R;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
+import com.west2.service.ShopService;
 import com.west2.service.ViewService;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -30,6 +33,10 @@ public class ShopActivity extends Activity{
 	private LinearLayout layoutMenu;
 	private ImageButton btnMenu,btnRecord,btnMyShop;
 	private ViewService viewService;
+	
+	private List<Shop> listShop;
+	private ShopListAdapter mAdapter;
+	
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_shop);
@@ -54,12 +61,13 @@ public class ShopActivity extends Activity{
 		layoutMenu.setLayoutParams(params);
 		pullToRefreshView.setMode(Mode.BOTH);
 		actualListView = pullToRefreshView.getRefreshableView();
-		List<Shop> listShop = new ArrayList<Shop>();
+		listShop = new ArrayList<Shop>();
 		for(int i=0;i<10;++i){
 			listShop.add(new Shop("Íò¼Î³¬ÊÐ("+(i+1)+")"));
 		}
 		actualListView.setAdapter(new ShopListAdapter(mContext,listShop));
 		
+		new GetShopListTask().execute();
 		menuIsShow = false;
 	}
 	private void SetListener(){
@@ -87,6 +95,8 @@ public class ShopActivity extends Activity{
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				Toast.makeText(mContext, "My Shop", Toast.LENGTH_SHORT).show();
+				Intent intent = new Intent(ShopActivity.this,MyShopActivity.class);
+				ShopActivity.this.startActivity(intent);
 			}
 		});
 	}
@@ -139,4 +149,30 @@ public class ShopActivity extends Activity{
 		btnMenu.setImageDrawable(mContext.getResources().getDrawable(R.drawable.menu_out_icon));
 		menuIsShow = false;
 	}
+	
+	
+	class GetShopListTask extends AsyncTask<Void, Void, Void>{
+
+		@Override
+		protected Void doInBackground(Void... params) {
+			// TODO Auto-generated method stub
+			listShop = ShopService.getShops(mContext);
+			
+			return null;
+		}
+		
+		protected void onPostExecute(Void result) {
+			
+//			if(mAdapter==null){
+				mAdapter = new ShopListAdapter(mContext, listShop);
+				actualListView.setAdapter(mAdapter);
+//			}
+			mAdapter.notifyDataSetChanged();
+			
+			super.onPostExecute(result);
+		}
+		
+	}
+	
+	
 }

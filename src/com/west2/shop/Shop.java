@@ -5,7 +5,21 @@ import java.util.List;
 
 public class Shop {
 	private String name;
+	private String id;
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	private List<Item> listItem;
+	private String person;
+	public String getPerson() {
+		return person;
+	}
+	public void setPerson(String person) {
+		this.person = person;
+	}
 	public Shop(){
 		name = "";
 		listItem = new ArrayList<Item>();

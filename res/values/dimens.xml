@@ -32,10 +32,14 @@
 	<dimen name="property_repair_maxheight">100dp</dimen>
 	<dimen name="property_repair_btnheight">70dp</dimen>
 	<!-- Shop -->
+	<dimen name="shop_padding">5dp</dimen>
 	<dimen name="shop_margin_top">10dp</dimen>
 	<dimen name="shop_max_height">100dp</dimen>
 	<dimen name="shop_title_size">30sp</dimen>
 	<dimen name="shop_menu_size">15sp</dimen>
+	<dimen name="myshop_textsize">20sp</dimen>
+	<dimen name="myshop_textsize_status">13sp</dimen>
+	<dimen name="myshop_btn_textsize">20sp</dimen>
 	<!-- Activity -->
 	<dimen name="activity_margin_top">10dp</dimen>
 	<dimen name="activity_margin_left">7dp</dimen>
@@ -52,6 +56,14 @@
 	<dimen name="activity_post_height_content">150dp</dimen>
 	<dimen name="activity_post_textsize_content">20sp</dimen>
 	<dimen name="activity_post_textsize_title">25sp</dimen>
+	<dimen name="activity_detail_textsize_host">15sp</dimen>
+	<dimen name="activity_detail_padding_host">2dp</dimen>
+	<dimen name="activity_detail_textsize">20sp</dimen>
+	<dimen name="activity_detail_textsize_time">12sp</dimen>
+	<dimen name="activity_detail_margin_left">5dp</dimen>
+	<dimen name="activity_detail_height_photo">50dp</dimen>
+	<dimen name="activity_detail_padding">5dp</dimen>
+	<dimen name="activity_detail_testsize_title">20sp</dimen>
 	<!-- Setting -->
 	<dimen name="setting_photo_height">100dp</dimen>
 	<dimen name="setting_margin_top">20dp</dimen>

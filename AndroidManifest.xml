@@ -6,11 +6,34 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    
+    
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar" >
+        <service
+            android:name="com.west2.notification.BgService"
+            android:enabled="true" >
+        </service>
+        <receiver
+		    android:name="com.west2.notification.MyBroadcastReceiver">
+		    <intent-filter>
+                <action android:name="android.intent.action.ACTION_TIME_TICK" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+            </intent-filter>
+		</receiver>
+        
+        
         <activity
             android:name="com.west2.login.LoginActivity"
             android:label="@string/app_name" >
@@ -27,9 +50,11 @@
         <activity android:name="com.west2.property.PropertyExpenseActivity"/>
         <activity android:name="com.west2.property.PropertyRepairActivity"/>
         <activity android:name="com.west2.property.PropertyAdviceActivity"/>
+        <activity android:name="com.west2.shop.ShopActivity"/>
+        <activity android:name="com.west2.shop.MyShopActivity"/>
         <activity android:name="com.west2.activity.ActivityActivity"/>
         <activity android:name="com.west2.activity.ActivityPostActivity"/>
+        <activity android:name="com.west2.activity.ActivityDetailActivity"/>
         <activity android:name="com.west2.setting.SettingActivity"/>
-        <activity android:name="com.west2.shop.ShopActivity"/>
     </application>
 </manifest>

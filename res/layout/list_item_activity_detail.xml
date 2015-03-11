@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/dark_grey"/>
+   	<!-- Head -->
+   	<LinearLayout 
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	   	android:orientation="horizontal"
+   	   	android:padding="@dimen/activity_detail_padding">
+		<!-- Photo -->
+		<ImageView
+		    android:id="@+id/activity_detail_img_photo"
+		    android:layout_width="0dp"
+		    android:layout_height="@dimen/activity_detail_height_photo"
+		    android:layout_weight="1"
+		    android:src="@drawable/photo"
+		    android:scaleType="fitCenter"/>
+		<!-- Name -->
+		<LinearLayout 
+		    android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="5"
+		    android:orientation="horizontal"
+		    android:gravity="center_vertical"
+		    android:padding="@dimen/activity_detail_padding">
+		    <TextView
+		        android:id="@+id/activity_detail_txt_name"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_vertical"
+		        android:text="Mcginn"
+		        android:textColor="@color/dark_grey"
+		        android:textSize="@dimen/activity_detail_textsize"/>
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:padding="@dimen/activity_detail_padding_host"
+		        android:layout_marginLeft="@dimen/activity_detail_margin_left"
+		        android:layout_marginStart="@dimen/activity_detail_margin_left"
+		        android:text="@string/activity_detail_host"
+		        android:textSize="@dimen/activity_detail_textsize_host"
+		        android:textColor="@color/orange"
+		        android:background="@drawable/activity_detail_host"/>
+		</LinearLayout>
+		<!-- Floor -->
+		<TextView
+	        android:id="@+id/activity_detail_txt_floor"
+		    android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    android:gravity="center_vertical|right"
+		    android:text="1楼"
+		    android:textColor="@color/dark_grey"/>
+   	</LinearLayout>
+   	<!-- Body -->
+   	<LinearLayout 
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	    android:orientation="horizontal"
+   	    android:padding="@dimen/activity_detail_padding">
+   	    <!-- Left -->
+   	    <LinearLayout 
+   	        android:layout_width="0dp"
+   	        android:layout_height="match_parent"
+   	        android:layout_weight="1"/>
+   	    <!-- Right -->
+   	    <LinearLayout 
+   	        android:layout_width="0dp"
+   	        android:layout_height="wrap_content"
+   	        android:layout_weight="6"
+   	        android:orientation="vertical"
+			android:layout_marginLeft="@dimen/activity_detail_margin_left"
+			android:layout_marginStart="@dimen/activity_detail_margin_left">
+		    <TextView
+		        android:id="@+id/activity_detail_txt_content"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:text="我这么帅一定有回复\n	             ---来治猩猩的你"
+		        android:textColor="@color/black"
+		        android:textSize="@dimen/activity_detail_textsize"/>
+		    <ImageView
+		        android:id="@+id/activity_detail_img_content"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/test"
+		        android:scaleType="fitStart"/>
+   	    </LinearLayout>
+   	</LinearLayout>
+	<!-- Bottom -->
+   	<LinearLayout 
+   	    android:layout_width="match_parent"
+   	    android:layout_height="wrap_content"
+   	    android:orientation="horizontal">
+   	    <!-- Left -->
+   	    <LinearLayout 
+   	        android:layout_width="0dp"
+   	        android:layout_height="match_parent"
+   	        android:layout_weight="1"/>
+   	    <!-- Right -->
+   	    <LinearLayout 
+   	        android:layout_width="0dp"
+   	        android:layout_height="wrap_content"
+   	        android:layout_weight="6"
+   	        android:orientation="horizontal"
+   	        android:padding="@dimen/activity_detail_padding">
+		    <TextView
+		        android:id="@+id/activity_detail_txt_time"		        
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="5"
+		        android:text="51分钟前"
+		        android:textColor="@color/dark_grey"
+		        android:textSize="@dimen/activity_detail_textsize_time"/>
+		    <LinearLayout 
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="2"
+		        android:gravity="end">
+			    <Button
+			        android:id="@+id/activity_detail_btn_review"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:background="@color/trans"
+			        android:text="回复"
+			        android:textColor="@color/blue"
+			        android:textSize="@dimen/activity_detail_textsize"/>
+		    </LinearLayout>
+   	    </LinearLayout>
+   	</LinearLayout>
+</LinearLayout>

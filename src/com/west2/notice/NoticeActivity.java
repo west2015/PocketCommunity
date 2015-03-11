@@ -9,10 +9,12 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.west2.adapter.ViewPagerAdapter;
+import com.west2.service.NoticeService;
 import com.west2.service.ViewService;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -25,6 +27,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -39,6 +42,9 @@ public class NoticeActivity extends Activity{
 	private PullToRefreshListView pullToRefreshView;
 	private ImageView[] dot;
 	private LinearLayout titleLayout;
+	
+	private List<Notice> listNotice;
+	private NoticeListAdapter mNoticeAdapter;
 
 	private int curItem;
 	private Context mContext;
@@ -75,18 +81,20 @@ public class NoticeActivity extends Activity{
 		
 		pullToRefreshView.setMode(Mode.BOTH);
 		actualListView = pullToRefreshView.getRefreshableView();
-		List<Notice> listNotice = new ArrayList<Notice>();
-		for(int i=0;i<20;++i){
-			listNotice.add(new Notice("这是第"+i+"条公告","12-26",""));
-		}
-		actualListView.setAdapter(new NoticeListAdapter(mContext,listNotice));
+		listNotice = new ArrayList<Notice>();
+//		for(int i=0;i<20;++i){
+//			listNotice.add(new Notice("这是第"+i+"条公告","12-26",""));
+//		}
+//		actualListView.setAdapter(new NoticeListAdapter(mContext,listNotice));
+		new GetNoticesTask().execute();
+		
 	}
 	private void setListener(){
 		pullToRefreshView.setOnRefreshListener(new OnRefreshListener<ListView>(){
 			@Override
 			public void onRefresh(PullToRefreshBase refreshView) {
 				// TODO Auto-generated method stub
-				
+				new GetNoticesTask().execute();
 			}
 		});
 		actualListView.setOnItemClickListener(new OnItemClickListener(){
@@ -135,4 +143,33 @@ public class NoticeActivity extends Activity{
 	private void GreyDot(int position){
 		dot[position].setImageDrawable(mContext.getResources().getDrawable(R.drawable.grey_dot));		
 	}
+	
+	
+	private class GetNoticesTask extends AsyncTask<Void, Void, Void>{
+
+		@Override
+		protected Void doInBackground(Void... params) {
+			// TODO Auto-generated method stub
+			
+			listNotice=NoticeService.getNotices(mContext);
+			return null;
+		}
+		@Override
+		protected void onPostExecute(Void result) {
+			
+			if(pullToRefreshView.isRefreshing()) pullToRefreshView.onRefreshComplete();
+			
+//			if(mNoticeAdapter==null){
+				mNoticeAdapter = new NoticeListAdapter(mContext, listNotice);
+				actualListView.setAdapter(mNoticeAdapter);
+//			}
+			mNoticeAdapter.notifyDataSetChanged();
+			
+			super.onPostExecute(result);
+		}
+		
+	}
+	
+	
+	
 }

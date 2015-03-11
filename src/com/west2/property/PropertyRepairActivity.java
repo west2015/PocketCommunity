@@ -1,9 +1,13 @@
 package com.west2.property;
 
 import com.example.pocketcommunity.R;
+import com.west2.activity.Activities;
+import com.west2.activity.ActivityPostActivity;
+import com.west2.service.ActivityService;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -64,5 +68,28 @@ public class PropertyRepairActivity extends Activity{
 				Toast.makeText(mContext, "Submit", Toast.LENGTH_SHORT).show();
 			}
 		});
+	}
+	
+	class AddRepairTask extends AsyncTask<Void, Void, Boolean>{
+
+		@Override
+		protected Boolean doInBackground(Void... params) {
+			// TODO Auto-generated method stub
+
+//			return ActivityService.addActivity(mContext, act);
+			return false;
+		}
+		
+		protected void onPostExecute(Boolean result) {
+			
+			
+			if(result){
+				Toast.makeText(mContext, "发表成功", Toast.LENGTH_SHORT).show();
+			}else{
+				Toast.makeText(mContext, "发表失败，请重试", Toast.LENGTH_SHORT).show();
+			}
+			
+			super.onPostExecute(result);
+		}
 	}
 }

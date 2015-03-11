@@ -11,6 +11,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -21,10 +23,9 @@ import android.widget.Toast;
 
 public class SettingActivity extends Activity{
 	private Context mContext;
-	private TextView textUsername;
-	private Button btnLogOff,btnTel,btnAddress;
-	private ImageButton btnPhoto,btnModify,btnMyExpense,btnMyRepair,
-			btnMyAdvice,btnMyShopRecord,btnHelp,btnUpdate;
+	private TextView txtUsername,txtTel,txtAddress;
+	private Button btnLogOff,btnModify,btnTel,btnAddress,btnExpense,btnRepair,btnAdvice,btnShopRecord;
+	private ImageButton btnPhoto;
 	
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
@@ -36,17 +37,17 @@ public class SettingActivity extends Activity{
 	}
 	private void FindView(){
 		btnPhoto = (ImageButton)findViewById(R.id.setting_photo);
-		textUsername = (TextView)findViewById(R.id.setting_text_username);
-		btnModify = (ImageButton)findViewById(R.id.setting_btn_modify);
+		btnModify = (Button)findViewById(R.id.setting_btn_modify);
 		btnTel = (Button)findViewById(R.id.setting_btn_tel);
 		btnAddress = (Button)findViewById(R.id.setting_btn_address);
-		btnMyExpense = (ImageButton)findViewById(R.id.setting_btn_myexpense);
-		btnMyRepair = (ImageButton)findViewById(R.id.setting_btn_myrepair);
-		btnMyAdvice = (ImageButton)findViewById(R.id.setting_btn_myadvice);
-		btnMyShopRecord = (ImageButton)findViewById(R.id.setting_btn_myshoprecord);
+		btnExpense = (Button)findViewById(R.id.setting_btn_myexpense);
+		btnRepair = (Button)findViewById(R.id.setting_btn_myrepair);
+		btnAdvice = (Button)findViewById(R.id.setting_btn_myadvice);
+		btnShopRecord = (Button)findViewById(R.id.setting_btn_myshoprecord);
 		btnLogOff = (Button)findViewById(R.id.setting_btn_logoff);
-		btnHelp = (ImageButton)findViewById(R.id.setting_btn_help);
-		btnUpdate = (ImageButton)findViewById(R.id.setting_btn_update);
+		txtUsername = (TextView)findViewById(R.id.setting_text_username);
+		txtTel = (TextView)findViewById(R.id.setting_txt_tel);
+		txtAddress = (TextView)findViewById(R.id.setting_txt_address);
 	}
 	private void InitValue(){
 		mContext = SettingActivity.this;
@@ -56,81 +57,16 @@ public class SettingActivity extends Activity{
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent();
-				intent.setType("image/*");
+				
+				Intent intent=new Intent();
+                intent.setType("image/*");
 				intent.setAction(Intent.ACTION_GET_CONTENT);
 				intent.addCategory(Intent.CATEGORY_OPENABLE);
-				SettingActivity.this.startActivityForResult(intent,0);
-			}
-		});
-		btnModify.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
 				
-			}
-		});
-		btnTel.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
+				SettingActivity.this.getParent().startActivityForResult(intent, 1);
 				
-			}
-		});
-		btnAddress.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
-		btnMyExpense.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
-		btnMyRepair.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
-		btnMyAdvice.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
-		btnMyShopRecord.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
-		btnHelp.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
-		btnUpdate.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
-		btnMyExpense.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				
+//				SettingActivity.this.startActivityForResult(intent, 1);
+				Log.e("1","!!2!!!");
 			}
 		});
 		btnLogOff.setOnClickListener(new OnClickListener(){
@@ -143,23 +79,22 @@ public class SettingActivity extends Activity{
 			}
 		});
 	}
-	@Override  
-	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+	
+	public void changeImage(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		Toast.makeText(mContext, "result OK!", Toast.LENGTH_SHORT).show();
-		
-//		if(resultCode == RESULT_OK) {
+		if(resultCode == RESULT_OK) {
 //			Toast.makeText(mContext, "result OK!", Toast.LENGTH_SHORT).show();
-//			Uri uri = data.getData();
-//			ContentResolver cr = this.getContentResolver();  
-//			try {  
-//				Bitmap bitmap = BitmapFactory.decodeStream(cr.openInputStream(uri));
-//				btnPhoto.setImageBitmap(bitmap);
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//		}
-//		else
+			Uri uri = data.getData();
+			ContentResolver cr = this.getContentResolver();  
+			try {  
+				Bitmap bitmap = BitmapFactory.decodeStream(cr.openInputStream(uri));
+				btnPhoto.setImageBitmap(bitmap);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		else{
 //			Toast.makeText(mContext, "result FAIL!", Toast.LENGTH_SHORT).show();
+		}
 	}  
 }

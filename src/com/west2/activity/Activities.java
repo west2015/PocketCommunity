@@ -1,24 +1,38 @@
 package com.west2.activity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Activities {
 	private boolean isTop;
-	private String title,content,thePerson,review;
-	
+	private String title,content,thePerson;
+	private List<Review> reviews;
+	private Comment [] comments;
 	public Activities(){
 		isTop = false;
 		title = "";
 		content = "";
-		thePerson = "";
-		review = "";
+		thePerson = ""; 
+		reviews = new ArrayList<Review>();
 	}
-	
 	public Activities(boolean _isTop,String _title,String _content,String _thePerson,String _review){
 		isTop = _isTop;
 		title = _title;
 		content = _content;
 		thePerson = _thePerson;
-		review = _review;
 	}
+	public List<Review> getReviews() {
+		return reviews;
+	}
+
+	public void setReviews(List<Review> reviews) {
+		this.reviews = reviews;
+	}
+
+	public void setTop(boolean isTop) {
+		this.isTop = isTop;
+	}
+
 
 	public boolean getIsTop() {
 		return isTop;
@@ -51,12 +65,15 @@ public class Activities {
 	public void setThePerson(String thePerson) {
 		this.thePerson = thePerson;
 	}
-
-	public String getReview() {
-		return review;
+	public Comment[] getComments() {
+		return comments;
 	}
-
-	public void setReview(String review) {
-		this.review = review;
+	public void setComments(Comment[] comments) {
+		this.comments = comments;
 	}
+	
+	
+
 }
+
+

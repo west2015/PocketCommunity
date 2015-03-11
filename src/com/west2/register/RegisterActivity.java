@@ -2,7 +2,10 @@ package com.west2.register;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.style.SuperscriptSpan;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,6 +20,8 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.pocketcommunity.R;
+import com.west2.domain.User;
+import com.west2.service.UserService;
 import com.west2.service.ViewService;
 
 public class RegisterActivity extends Activity{
@@ -80,14 +85,17 @@ public class RegisterActivity extends Activity{
 					++cntPage;
 				}
 				else{
+					String toastStr = "111";
 					switch(res){
-					case 1:break;
-					case 2:break;
-					case 3:break;
+					case 1: toastStr="用户名不能为空";  break;
+					case 2:	toastStr="密码不能为空";	break;
+					case 3:	toastStr="两次密码不一致";	break;
 					case 4:break;
 					case 5:break;
 					case 6:break;
 					}
+					Toast.makeText(mContext,toastStr, Toast.LENGTH_SHORT).show();
+					
 				}
 			}
 		});
@@ -95,28 +103,48 @@ public class RegisterActivity extends Activity{
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				RegisterActivity.this.finish();
+				
+				int res = check(cntPage);
+				if(res==0){
+					new RegisterTask().execute();
+				}
+				else{
+					String toastStr = "111";
+					switch(res){
+					case 1: toastStr="用户名不能为空";  break;
+					case 2:	toastStr="密码不能为空";	break;
+					case 3:	toastStr="两次密码不一致";	break;
+					case 4: toastStr="姓名不能为空"; break;
+					case 5: toastStr="电话不能为空";break;
+					case 6: toastStr="地址不能为空";break;
+					}
+					Toast.makeText(mContext,toastStr, Toast.LENGTH_SHORT).show();
+					
+				}
+				
+//				
+//				RegisterActivity.this.finish();
 			}
 		});
 	}
 	private int check(int step){
-//		if(step == 1){
-//			String username = etUsername.getText().toString();
-//			if(username==null || username.equals("")) return 1;
-//			String psw_1 = etPassword_1.getText().toString();
-//			if(psw_1==null || psw_1.equals("")) return 2;
-//			String psw_2 = etPassword_2.getText().toString();
-//			if(psw_2==null || !psw_2.endsWith(psw_1)) return 3;
-//		}
-//		else
-//		if(step == 2){
-//			String name = etName.getText().toString();
-//			if(name==null || name.equals("")) return 4;
-//			String tel = etTel.getText().toString();
-//			if(tel==null || tel.equals("")) return 5;
-//			String address = etAddress.getText().toString();
-//			if(address==null || address.equals("")) return 6;
-//		}
+		if(step == 1){
+			String username = etUsername.getText().toString();
+			if(username==null || username.equals("")) return 1;
+			String psw_1 = etPassword_1.getText().toString();
+			if(psw_1==null || psw_1.equals("")) return 2;
+			String psw_2 = etPassword_2.getText().toString();
+			if(psw_2==null || !psw_2.endsWith(psw_1)) return 3;
+		}
+		else
+		if(step == 2){
+			String name = etName.getText().toString();
+			if(name==null || name.equals("")) return 4;
+			String tel = etTel.getText().toString();
+			if(tel==null || tel.equals("")) return 5;
+			String address = etAddress.getText().toString();
+			if(address==null || address.equals("")) return 6;
+		}
 		return 0;
 	}
 	private void changePage(){
@@ -182,4 +210,46 @@ public class RegisterActivity extends Activity{
 		}
 		return false;
 	}
+	
+	
+	class RegisterTask extends AsyncTask<Void, Void, Integer>{
+
+		@Override
+		protected Integer doInBackground(Void... params) {
+			// TODO Auto-generated method stub
+			User u  = new User();
+			u.setAddress(etAddress.getText().toString());
+			u.setName(etUsername.getText().toString());
+			u.setPass(etPassword_1.getText().toString());
+			u.setPhone(etTel.getText().toString());
+			u.setRealName(etName.getText().toString());
+			
+			return UserService.register(getApplicationContext(), u);
+		}
+		
+		@Override
+		protected void onPostExecute(Integer result){
+			
+			Log.e("!!!", result+"!!!");
+			
+			if(result==0){
+				Toast.makeText(mContext, "注册成功。", Toast.LENGTH_SHORT).show();
+				Log.e("!", "注册成功。");
+				super.onPostExecute(result);
+				RegisterActivity.this.finish();
+			}
+			if(result==1){
+				Toast.makeText(mContext, "用户名已存在。", Toast.LENGTH_SHORT).show();
+				changePage();
+				--cntPage;
+			}
+			if(result==2){
+				Toast.makeText(mContext, "网络错误?请重试",Toast.LENGTH_SHORT).show();
+			}
+			
+			super.onPostExecute(result);
+		}
+		
+	}
+	
 }
